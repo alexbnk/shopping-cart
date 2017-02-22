@@ -1,6 +1,6 @@
 // an array with all of our cart items
 var cart = [];
-
+/*
 var updateCart = function () {
   // TODO: Write this function. In this function we render the page.
   // Meaning we make sure that all our cart items are displayed in the browser.
@@ -9,7 +9,7 @@ var updateCart = function () {
 
 
 var addItem = function (item) {
-  // TODO: Write this function. Remember this function has nothing to do with display. 
+  // TODO: Write this function. Remember this function has nothing to do with display.
   // It simply is for adding an item to the cart array, no HTML involved - honest ;-)
 }
 
@@ -26,6 +26,7 @@ $('.add-to-cart').on('click', function () {
   addItem(item);
   updateCart();
 });
+*/
 
 $('.clear-cart').on('click', function () {
   clearCart();
