@@ -1,0 +1,5 @@
+Users with AWS Management Console access can sign-in at: https://intelix.signin.aws.amazon.com/console
+
+Access key ID: AKIAIWOHZZWHKOF36ZHQ
+Secret access key : 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
+
