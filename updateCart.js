@@ -1,14 +1,28 @@
 var cartTotal=0;
-
 var updateCart = function () {
   $(".cart-list").empty();
   cartTotal = 0;
+  var map={};
+
   for (var i=0 ; i< cart.length ; i++) {
-    $(".cart-list").append("<p>"+cart[i].name+" -  $"+cart[i].price+"</p>");
-   cartTotal = cartTotal+cart[i].price;
-  }
+    var key = cart[i].name;
+    if (map[key]) {
+      map[key].quantity++;
+    }//if object is in the map
+    else {
+      map[key] = {
+        name: key,
+        price: cart[i].price,
+        quantity: 1
+      }//make object
+    }//else object is not on the map- make it
+  }//for making the map
+    for ( var j in map){
+    $(".cart-list").append("<p>"+map[j].name+" -  $"+"("+map[j].quantity+")"+map[j].price+"</p>");
+   cartTotal = cartTotal+(map[j].price*map[j].quantity);
+ }// for each
 viewCART(true);
-  $(".total").empty()
+  $(".total").empty();
   $(".total").append(cartTotal);
   // TODO: Write this function. In this function we render the page.
   // Meaning we make sure that all our cart items are displayed in the browser.
