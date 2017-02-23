@@ -1,7 +1,8 @@
-var cartCount=1;
+var cartCount=0;
 $('.view-cart').on('click', function () {
   // TODO: hide/show the shopping cart!
 //$('.shopping-cart').toggle(trigger);});
+console.log(cartCount);
  if (cartCount%2===0){
      viewCART(true);
    }//if hidden

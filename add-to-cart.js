@@ -5,6 +5,8 @@ $('.add-to-cart').on('click', function () {
     var name = ($(this).parent().parent().data().name);
     var price = ($(this).parent().parent().data().price);
     var item = {name:name, price:price} //create object
+// Cart count update when addtocart is clicked
+cartCount++;
 //console.log(name + price); - test
  addItem(item);
  updateCart();
