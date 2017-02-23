@@ -1,3 +1,4 @@
+$('#admin-form').parsley();
 var item = {};
 $("#preview").on("click", function(){
 item = {name:$("#pname").val(),price:$("#pprice").val(),image:$("#ppic").val()};

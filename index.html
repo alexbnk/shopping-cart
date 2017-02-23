@@ -41,10 +41,10 @@
   <div class=" jumbotron col-md-6">
     <h2> Admin </h2>
     <h3>Add a product: </h3>
-     <form class="form-group">
-       <p>Product Name <input id="pname" type="text" name="pname" value="" placeholder="Product Name"></p>
-       <p>Product price <input id="pprice" type="text" name="pprice" value="" placeholder="Product Price"></p>
-       <p>Picture <input id="ppic" type="text" name="ppic" value="" placeholder="Product picture URL"></p>
+     <form class="form-group" id="admin-form" data-parsley-validate>
+       <p>Product Name <input id="pname" type="text" name="pname" value="" placeholder="Product Name" required=""></p>
+       <p>Product price <input id="pprice" type="text" name="pprice" value="" placeholder="Product Price" required=""></p>
+       <p>Picture <input id="ppic" name="ppic" value="" placeholder="Product picture URL" type="url"	data-parsley-type="url" required=""></p>
        <button type="button" class="btn btn-info" name="button">submit</button>
        <button type="button" class="btn btn-info" id="preview" name="button">preview</button>
   </div>
@@ -173,7 +173,8 @@
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
-  <script type="text/javascript" src="amazon.js"></script>
+  <script type="text/javascript" src="node_modules/parsleyjs/dist/parsley.js"></script>
+  <!-- <script type="text/javascript" src="amazon.js"></script> -->
   <script id = "preview-template" type = "text/x-handlebars-template">
    <div class='jumbotron'>
      <h1>Preview:</h1>
