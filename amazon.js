@@ -10,9 +10,9 @@ var client = amazon.createClient({
 
 client.itemSearch({
   director: 'Quentin Tarantino',
-  actor: 'Samuel L. Jackson',
-  searchIndex: 'DVD',
-  audienceRating: 'R',
+//  actor: 'Samuel L. Jackson',
+//  searchIndex: 'DVD',
+//  audienceRating: 'R',
   responseGroup: 'ItemAttributes,Offers,Images'
 }, function(err, results, response) {
   if (err) {
