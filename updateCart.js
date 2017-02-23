@@ -23,8 +23,8 @@ var updateCart = function () {
  }// for each
  if (cart.length == 0) {
    viewCART(false);
-     $(".total").empty();
-     $(".total").append(cartTotal);
+    //  $(".total").empty();
+    //  $(".total").append(cartTotal);
  } else {
 viewCART(true);
   $(".total").empty();
