@@ -1,3 +1,6 @@
+var express = require('express');
+var app = express();
+app.listen(8000);
 
 var amazon = require('amazon-product-api');
 var client = amazon.createClient({
@@ -8,6 +11,16 @@ var client = amazon.createClient({
 
 
 
+
+
+
+
+app.get('/', function(request, response){
+//  console.log("Hello World");
+});
+
+app.get('/amazon', function(request, response){
+  response.send("this should get Amazon Products queries");
 client.itemSearch({
   director: 'Quentin Tarantino',
   actor: 'Samuel L. Jackson',
@@ -16,11 +29,13 @@ client.itemSearch({
   responseGroup: 'ItemAttributes,Offers,Images'
 }, function(err, results, response) {
   if (err) {
-    console.log('Server made a boo boo ...')
     console.log(err);
   } else {
-    console.log('Success :) ');
     console.log(results);  // products (Array of Object)
     console.log(response); // response (Array where the first element is an Object that contains Request, Item, etc.)
   }
 });
+
+});
+
+
