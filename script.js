@@ -34,3 +34,4 @@ $('.clear-cart').on('click', function () {
 
 // update the cart as soon as the page loads!
 updateCart();
+viewCART(false);

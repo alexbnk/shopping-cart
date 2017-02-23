@@ -18,7 +18,7 @@ var updateCart = function () {
     }//else object is not on the map- make it
   }//for making the map
     for ( var j in map){
-    $(".cart-list").append("<p>"+map[j].name+" -  $"+"("+map[j].quantity+")"+map[j].price+"</p>");
+    $(".cart-list").append("<p>"+map[j].name+"("+map[j].quantity+") -$"+map[j].price+"</p>");
    cartTotal = cartTotal+(map[j].price*map[j].quantity);
  }// for each
  if (cart.length == 0) {
